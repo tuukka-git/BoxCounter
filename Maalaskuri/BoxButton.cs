@@ -7,10 +7,10 @@ using System.Drawing;
 
 namespace BoxCounter
 {
-    public class LandButton : System.Windows.Forms.Button
+    public class BoxButton : System.Windows.Forms.Button
     {
         public int colornum;
-        public LandButton()
+        public BoxButton()
         {
             colornum = 0;
             this.BackColor = colorList[colornum];

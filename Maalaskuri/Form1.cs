@@ -13,16 +13,16 @@ namespace BoxCounter
 {
     public partial class Form1 : Form
     {
-        public LandButton[,] arr;
+        public BoxButton[,] arr;
         public Form1()
         {
             InitializeComponent();
-            arr = new LandButton[yAxel, xAxel];
+            arr = new BoxButton[yAxel, xAxel];
             for (int i = 0; i < yAxel; i++)
             {
                 for (int j = 0; j < xAxel; j++)
                 {
-                    LandButton newButton = new LandButton();
+                    BoxButton newButton = new BoxButton();
                     newButton.Size = new Size(button_width, button_height);
                     newButton.Location = new Point(button_width * j, button_height * i);
                     arr[i, j] = newButton;
