@@ -13,10 +13,11 @@ namespace BoxCounter
 {
     public partial class Form1 : Form
     {
-        public BoxButton[,] arr;
+        public BoxButton[,] arr; //datastructure for boxbuttons
         public Form1()
         {
             InitializeComponent();
+            //loop to create BoxButtons
             arr = new BoxButton[yAxel, xAxel];
             for (int i = 0; i < yAxel; i++)
             {
@@ -40,6 +41,7 @@ namespace BoxCounter
         {
 
         }
+        //algorithm to find all the diffrent color boxes from Form
         private void sameColorAreas(int color, int i, int j)
         {
             try
@@ -65,6 +67,7 @@ namespace BoxCounter
                 return;
             }
         }
+        //creates checklist for boxes that are checked
         private bool[,] generateCheckList()
         {
             bool[,] tempArr = new bool[yAxel, xAxel];
@@ -77,6 +80,7 @@ namespace BoxCounter
             }
             return tempArr;
         }
+        //starts algorithm from boxes where algorithm hasnt been yet
         private void checkAreas()
         {
             int count = 0;

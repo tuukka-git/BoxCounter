@@ -7,6 +7,7 @@ using System.Drawing;
 
 namespace BoxCounter
 {
+    //Button that changes color on click
     public class BoxButton : System.Windows.Forms.Button
     {
         public int colornum;
@@ -16,6 +17,7 @@ namespace BoxCounter
             this.BackColor = colorList[colornum];
             this.ForeColor = colorList[colornum];
         }
+        //changes color index
         public void ChangeColor() 
         {
             if (colornum < colorList.Length - 1)
@@ -30,6 +32,7 @@ namespace BoxCounter
         {
             return this.colornum;
         }
+        //new index is used  to change color
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
